@@ -18,7 +18,7 @@
 [wikipedia_data.zip](https://drive.google.com/file/d/1zqtjSb-ZoR4rzVUWZrjNSES5GKJhYmmH/view?usp=sharing) をダウンロードして解凍し、以下のようなディレクトリ構成にしてください。
 
 ```
-step-wikipedia
+step_wikipedia-graph
 ├── data
 │   ├── graph_small.png
 │   ├── links_small.txt
@@ -28,7 +28,8 @@ step-wikipedia
 ├── .gitignore
 ├── README.md
 ├── wikipedia_sample.cc
-└── wikipedia_sample.py
+├── wikipedia_sample.py
+└── WikipediaSample.java
 ```
 
 ## グラフデータ
@@ -54,23 +55,28 @@ step-wikipedia
 
 各プログラムを実行すると、Google をタイトルとするページの id が表示されます。
 
-### 実行環境
-
-以下の環境で動作確認をしました。これ以外では動かないことがあるかもしれません。
-
-* C++: g++ 10.2.1
-* Python: 3.9.2
-
 ### 実行方法
 
 #### C++
 
-```
+テスト環境: g++ 10.2.1
+
+```shell
 g++ wikipedia_sample.cc && ./a.out
+```
+
+#### Java
+
+テスト環境: JDK 11.0.11
+
+```shell
+javac WikipediaSample.java && java WikipediaSample
 ```
 
 #### Python
 
-```
+テスト環境: Python 3.9.2
+
+```shell
 python3 wikipedia_sample.py
 ```
